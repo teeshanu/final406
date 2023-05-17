@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Room Reservation</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', 
+filename='style.css') }}">
+</head>
+<body>
+    <h1>Hospital Room Reservation</h1>
+    <form action="{{ url_for('reservation') }}" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" maxlength="30" required>
+
+        <label for="appointment_date">Appointment Date:</label>
+        <input type="date" id="appointment_date" name="appointment_date" 
+required>
+
+        <label for="appointment_time">Appointment Time:</label>
+        <input type="time" id="appointment_time" name="appointment_time" 
+required>
+
+        <label for="appointment_type">Appointment Type:</label>
+        <select id="appointment_type" name="appointment_type" required>
+            <option value="checkup">Check-up</option>
+            <option value="surgery">Surgery</option>
+            <option value="physical">Physical</option>
+        </select>
+
+        <input type="submit" value="Submit">
+        <a class="btn" href="{{ url_for('home') }}">Home</a>
+    </form>
+</body>
+</html>

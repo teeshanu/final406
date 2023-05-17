@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to the Teeshans Hospital</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', 
+filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Teeshans Hospital</h1>
+    <a class="btn" href="{{ url_for('reservation') }}">Book an 
+Appointment</a>
+    <a class="btn" href="{{ url_for('reservation_list') }}">Doctor</a>
+</body>
+</html>
+

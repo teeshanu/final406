@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reservation List</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', 
+filename='style.css') }}">
+</head>
+<body>
+    <h1>Reservation List</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Appointment Date</th>
+            <th>Appointment Time</th>
+            <th>Appointment Type</th>
+        </tr>
+        {% for reservation in reservations %}
+        <tr>
+            <td>{{ reservation.name }}</td>
+            <td>{{ reservation.appointment_date }}</td>
+            <td>{{ reservation.appointment_time }}</td>
+            <td>{{ reservation.appointment_type }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a class="
+
